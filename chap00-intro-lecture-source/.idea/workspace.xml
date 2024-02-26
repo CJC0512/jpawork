@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2525061-a67c-4962-bf76-9b02bbbaed08" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../chap01-persistence-context/src/test/java/com/ohgiraffers/section01/A_EntityManagerLifeCycleTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chap01-persistence-context/src/test/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ohgiraffers/section01/problem/ProblemOfUsingDirectSQLTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ohgiraffers/section01/problem/ProblemOfUsingDirectSQLTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +29,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2cskUSJ3KWhUc0GM2DEo0bJVCWu" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -41,7 +42,7 @@
     "Gradle.ProblemOfUsingDirectSQLTests.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/chap00-intro",
+    "git-widget-placeholder": "feature/chap01-persistence-context",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -69,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1708907690600</updated>
-      <workItem from="1708907691674" duration="6613000" />
+      <workItem from="1708907691674" duration="7345000" />
     </task>
     <servers />
   </component>
