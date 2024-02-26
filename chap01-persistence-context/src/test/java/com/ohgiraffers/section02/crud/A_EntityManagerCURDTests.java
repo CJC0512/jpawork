@@ -110,8 +110,12 @@ public class A_EntityManagerCURDTests {
 
         try {
             entityManager.remove(menuToRemove);
+            System.out.println("menuToRemove = " + menuToRemove);
             entityTransaction.commit();
         } catch (Exception e){
+//            외래키 참조로 인한 삭제 에러가 일어날 수 있으니 주의할 것.
+//            System.out.println("rollback 후 : ");
+//            e.printStackTrace();
             entityTransaction.rollback();
         }
 

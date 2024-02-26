@@ -6,6 +6,7 @@
 
         <!-- 설명. 엔티티는 설정에 따로 추가할 것 -->
         <class>com.ohgiraffers.section02.crud.Menu</class>
+        <class>com.ohgiraffers.section03.persistencecontext.Menu</class>
 
         <properties>
 
