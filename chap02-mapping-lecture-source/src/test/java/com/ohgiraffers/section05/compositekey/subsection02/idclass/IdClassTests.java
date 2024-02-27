@@ -6,23 +6,25 @@ import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 import org.junit.jupiter.api.*;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class IdClassTests {
     private static EntityManagerFactory entityManagerFactory;
 
     private EntityManager entityManager;
 
     @BeforeAll
-    public static void initFactory(){
+    public static void initFactory() {
         entityManagerFactory = Persistence.createEntityManagerFactory("jpatest");
     }
 
     @BeforeEach
-    public void initManager(){
+    public void initManager() {
         entityManager = entityManagerFactory.createEntityManager();
     }
 
     @AfterAll
-    public static void closeFactory(){
+    public static void closeFactory() {
         entityManagerFactory.close();
     }
 
@@ -32,7 +34,7 @@ public class IdClassTests {
     }
 
     @Test
-    public void 아이디_클래스_사용한_복합키_테이블_매핑_테스트(){
+    public void 아이디_클래스_사용한_복합키_테이블_매핑_테스트() {
         Member member = new Member();
         member.setMemberNo(1);
         member.setMemberId("user01");
@@ -44,8 +46,7 @@ public class IdClassTests {
         entityManager.persist(member);
         entityTransaction.commit();
 
-        Member foundMember = entityManager.find(Member.class, new MemberPK(1,"user01"));
-        Assertions.assertEquals(member, foundMember);
+        Member foundMember = entityManager.find(Member.class, new MemberPK(1, "user01"));
+        assertEquals(member, foundMember);
     }
 }
-

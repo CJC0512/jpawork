@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 import java.util.Date;
 
-@Entity(name ="member_section02")
+@Entity(name="member_section02")
 @Table(name="tbl_member_section02")
 public class Member {
 
@@ -31,9 +31,9 @@ public class Member {
     private String address;
 
     @Column(name="enroll_date")
-//    @Temporal(TemporalType.TIMESTAMP)       // Datetime
-//    @Temporal(TemporalType.DATE)       // Date
-    @Temporal(TemporalType.TIME)       // Time
+//    @Temporal(TemporalType.TIMESTAMP)           // Datetime
+//    @Temporal(TemporalType.DATE)           // Date
+    @Temporal(TemporalType.TIME)             // Time
     private java.util.Date enrollDate;
 
     @Column(name="member_role")
@@ -41,7 +41,6 @@ public class Member {
 
     @Column(name="status")
     private String status;
-
 
     public Member() {
     }
@@ -155,3 +154,4 @@ public class Member {
                 '}';
     }
 }
+

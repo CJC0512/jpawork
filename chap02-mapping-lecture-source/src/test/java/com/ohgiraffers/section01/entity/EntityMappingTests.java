@@ -6,6 +6,7 @@ import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 import org.junit.jupiter.api.*;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class EntityMappingTests {
 
@@ -14,27 +15,27 @@ public class EntityMappingTests {
     private EntityManager entityManager;
 
     @BeforeAll
-    public static void initFactory(){
+    public static void initFactory() {
         entityManagerFactory = Persistence.createEntityManagerFactory("jpatest");
     }
 
     @BeforeEach
-    public void initManager(){
+    public void initManager() {
         entityManager = entityManagerFactory.createEntityManager();
     }
 
     @AfterAll
-    public static void closeFactory(){
+    public static void closeFactory() {
         entityManagerFactory.close();
     }
 
     @AfterEach
-    public void closeManager(){
+    public void closeManager() {
         entityManager.close();
     }
 
     @Test
-    public void 테이블_만들기_테스트(){
+    public void 테이블_만들기_테스트() {
 
         // given
         Member member = new Member();
@@ -53,14 +54,13 @@ public class EntityMappingTests {
         EntityTransaction entityTransaction = entityManager.getTransaction();
         entityTransaction.begin();
 
-        entityManager.persist(member);  // 영속성 컨텍스트에 member를 관리하도록 부탁
-
+        entityManager.persist(member);
 
         // then
-        Member foundMember = entityManager.find(Member.class, 1);       // 1차 캐시에 있는 entity 가져오기
+        Member foundMember = entityManager.find(Member.class, 1);
         foundMember.setNickname("동해번쩍");
-
+        
         entityTransaction.commit();
-        Assertions.assertEquals(member, foundMember);
+        assertEquals(member, foundMember);
     }
 }

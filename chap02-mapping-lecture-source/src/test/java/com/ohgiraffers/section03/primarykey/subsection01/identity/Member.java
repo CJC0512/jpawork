@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 import java.util.Date;
 
-@Entity(name ="member_section03_subsection01")
+@Entity(name="member_section03_subsection01")
 @Table(name="tbl_member_section03_subsection01")
 public class Member {
 
@@ -32,14 +32,13 @@ public class Member {
     private String address;
 
     @Column(name="enroll_date")
-    private java.util.Date enrollDate;
+    private Date enrollDate;
 
     @Column(name="member_role")
     private String memberRole;
 
     @Column(name="status")
     private String status;
-
 
     public Member() {
     }

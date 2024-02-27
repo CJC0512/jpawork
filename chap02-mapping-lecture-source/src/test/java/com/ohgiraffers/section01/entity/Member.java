@@ -7,7 +7,7 @@ import jakarta.persistence.Table;
 
 import java.util.Date;
 
-@Entity(name ="member_section01")
+@Entity(name="member_section01")
 @Table(name="tbl_member_section01")
 public class Member {
 
@@ -41,7 +41,6 @@ public class Member {
 
     @Column(name="status")
     private String status;
-
 
     public Member() {
     }

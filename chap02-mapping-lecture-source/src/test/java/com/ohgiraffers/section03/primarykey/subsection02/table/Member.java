@@ -4,11 +4,11 @@ import jakarta.persistence.*;
 
 import java.util.Date;
 
-@Entity(name ="member_section03_subsection02")
+@Entity(name="member_section03_subsection02")
 @Table(name="tbl_member_section03_subsection02")
 @TableGenerator(
-        name = "member_seq_table_generator",
-        table = "tbl_my_sequence",
+        name="member_seq_table_generator",
+        table="tbl_my_sequence",
         pkColumnValue = "my_seq_member_no"
 )
 public class Member {
@@ -44,7 +44,6 @@ public class Member {
 
     @Column(name="status")
     private String status;
-
 
     public Member() {
     }

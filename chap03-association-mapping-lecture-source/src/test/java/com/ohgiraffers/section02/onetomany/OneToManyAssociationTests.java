@@ -1,27 +1,28 @@
 package com.ohgiraffers.section02.onetomany;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.persistence.Persistence;
+import jakarta.persistence.*;
 import org.junit.jupiter.api.*;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 public class OneToManyAssociationTests {
+
     private static EntityManagerFactory entityManagerFactory;
 
     private EntityManager entityManager;
 
     @BeforeAll
-    public static void initFactory(){
+    public static void initFactory() {
         entityManagerFactory = Persistence.createEntityManagerFactory("jpatest");
     }
 
     @BeforeEach
-    public void initManager(){
+    public void initManager() {
         entityManager = entityManagerFactory.createEntityManager();
     }
 
     @AfterAll
-    public static void closeFactory(){
+    public static void closeFactory() {
         entityManagerFactory.close();
     }
 
@@ -36,7 +37,7 @@ public class OneToManyAssociationTests {
 
         CategoryAndMenu categoryAndMenu = entityManager.find(CategoryAndMenu.class, categoryCode);
 
-        Assertions.assertNotNull(categoryAndMenu);
+        assertNotNull(categoryAndMenu);
 
         System.out.println("categoryAndMenu = " + categoryAndMenu);
     }

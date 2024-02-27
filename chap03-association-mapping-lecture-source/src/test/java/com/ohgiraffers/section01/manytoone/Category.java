@@ -10,10 +10,10 @@ import jakarta.persistence.Table;
 public class Category {
 
     @Id
-    @Column(name = "category_code")
+    @Column(name="category_code")
     private int categoryCode;
 
-    @Column(name = "category_name")
+    @Column(name="category_name")
     private String categoryName;
 
     @Column(name="ref_category_code")

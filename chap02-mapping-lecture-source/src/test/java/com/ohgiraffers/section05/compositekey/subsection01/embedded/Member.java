@@ -1,13 +1,16 @@
 package com.ohgiraffers.section05.compositekey.subsection01.embedded;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.EmbeddedId;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
 @Entity(name="member_section05_subsection01")
-@Table(name = "tbl_member_section05_subsection01")
+@Table(name="tbl_member_section05_subsection01")
 public class Member {
 
     @EmbeddedId
-    private  MemberPK memberPK;
+    private MemberPK memberPK;
 
     @Column(name="phone")
     private String phone;
