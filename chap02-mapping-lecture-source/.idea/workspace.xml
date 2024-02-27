@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b12b46a7-9582-46b0-b37d-27b6a27e24c6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../chap00-intro-lecture-source/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../chap00-intro-lecture-source/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chap00-intro-lecture-source/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../chap00-intro-lecture-source/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/09ca56e6-10b5-478f-8fbf-9ad7ea34e9b4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/09ca56e6-10b5-478f-8fbf-9ad7ea34e9b4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chap03-association-mapping-lecture-source/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chap03-association-mapping-lecture-source/src/test/java/com/ohgiraffers/section01/manytoone/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chap03-association-mapping-lecture-source/src/test/java/com/ohgiraffers/section01/manytoone/ManyToOneAssociationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chap03-association-mapping-lecture-source/src/test/java/com/ohgiraffers/section01/manytoone/MenuAndCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chap03-association-mapping-lecture-source/src/test/java/com/ohgiraffers/section02/onetomany/CategoryAndMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chap03-association-mapping-lecture-source/src/test/java/com/ohgiraffers/section02/onetomany/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chap03-association-mapping-lecture-source/src/test/java/com/ohgiraffers/section02/onetomany/OneToManyAssociationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chap03-association-mapping-lecture-source/src/test/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +66,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature/chap03-association-mapping",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/bootcamp/jpawork/chap02-mapping-lecture-source",
     "node.js.detected.package.eslint": "true",
