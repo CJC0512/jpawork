@@ -8,17 +8,17 @@ import jakarta.persistence.*;
 public class Member {
 
     @Id
-    @Column(name = "member_no")
+    @Column(name="member_no")
     private int memberNo;
 
     @Id
-    @Column(name = "member_id")
+    @Column(name="member_id")
     private String memberId;
 
-    @Column(name = "phone")
+    @Column(name="phone")
     private String phone;
 
-    @Column(name = "address")
+    @Column(name="address")
     private String address;
 
     public Member() {
@@ -35,28 +35,28 @@ public class Member {
         return memberNo;
     }
 
-    public String getMemberId() {
-        return memberId;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
     public void setMemberNo(int memberNo) {
         this.memberNo = memberNo;
+    }
+
+    public String getMemberId() {
+        return memberId;
     }
 
     public void setMemberId(String memberId) {
         this.memberId = memberId;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getAddress() {
+        return address;
     }
 
     public void setAddress(String address) {
@@ -64,7 +64,8 @@ public class Member {
     }
 
     @Override
-    public String toString() {
+    public String
+    toString() {
         return "Member{" +
                 "memberNo=" + memberNo +
                 ", memberId='" + memberId + '\'' +

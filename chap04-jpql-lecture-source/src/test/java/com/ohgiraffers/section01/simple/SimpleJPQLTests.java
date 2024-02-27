@@ -6,23 +6,25 @@ import jakarta.persistence.Persistence;
 import jakarta.persistence.TypedQuery;
 import org.junit.jupiter.api.*;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class SimpleJPQLTests {
     private static EntityManagerFactory entityManagerFactory;
 
     private EntityManager entityManager;
 
     @BeforeAll
-    public static void initFactory(){
+    public static void initFactory() {
         entityManagerFactory = Persistence.createEntityManagerFactory("jpatest");
     }
 
     @BeforeEach
-    public void initManager(){
+    public void initManager() {
         entityManager = entityManagerFactory.createEntityManager();
     }
 
     @AfterAll
-    public static void closeFactory(){
+    public static void closeFactory() {
         entityManagerFactory.close();
     }
 
@@ -32,7 +34,7 @@ public class SimpleJPQLTests {
     }
 
     @Test
-    public void TypeQuery를_이용한_단일행_단일열_조회_테스트(){
+    public void TypeQuery를_이용한_단일행_단일열_조회_테스트() {
 
         String jpql = "SELECT m.menuName FROM menu_section01 as m WHERE m.menuCode = 7";
         TypedQuery<String> query = entityManager.createQuery(jpql, String.class);
@@ -41,7 +43,7 @@ public class SimpleJPQLTests {
 
         System.out.println("resultMenuName = " + resultMenuName);
 
-        Assertions.assertEquals("민트미역국", resultMenuName);
+        assertEquals("민트미역국", resultMenuName);
 
     }
 }

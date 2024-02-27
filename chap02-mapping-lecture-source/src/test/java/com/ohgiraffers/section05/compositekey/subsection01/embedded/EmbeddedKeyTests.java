@@ -6,23 +6,25 @@ import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 import org.junit.jupiter.api.*;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class EmbeddedKeyTests {
     private static EntityManagerFactory entityManagerFactory;
 
     private EntityManager entityManager;
 
     @BeforeAll
-    public static void initFactory(){
+    public static void initFactory() {
         entityManagerFactory = Persistence.createEntityManagerFactory("jpatest");
     }
 
     @BeforeEach
-    public void initManager(){
+    public void initManager() {
         entityManager = entityManagerFactory.createEntityManager();
     }
 
     @AfterAll
-    public static void closeFactory(){
+    public static void closeFactory() {
         entityManagerFactory.close();
     }
 
@@ -32,9 +34,9 @@ public class EmbeddedKeyTests {
     }
 
     @Test
-    public void 임베디드_아이디를_사용한_복합키_테이블_매핑_사이트(){
+    public void 임베디드_아이디를_사용한_복합키_테이블_매핑_테스트() {
         Member member = new Member();
-        member.setMemberPK(new MemberPK(1,"user01"));
+        member.setMemberPK(new MemberPK(1, "user01"));
         member.setPhone("010-1234-5678");
         member.setAddress("서울시 종로구");
 
@@ -44,6 +46,6 @@ public class EmbeddedKeyTests {
         entityTransaction.commit();
 
         Member foundMember = entityManager.find(Member.class, member.getMemberPK());
-        Assertions.assertEquals(member.getMemberPK(), foundMember.getMemberPK());
+        assertEquals(member.getMemberPK(), foundMember.getMemberPK());
     }
 }
