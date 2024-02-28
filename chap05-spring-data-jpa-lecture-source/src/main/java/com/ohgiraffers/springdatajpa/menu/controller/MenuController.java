@@ -16,6 +16,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -84,6 +85,21 @@ public class MenuController {
         return "menu/list";
     }
 
+    @GetMapping("/querymethod")
+    public void queryMethodPage(){
+
+    }
+
+    @GetMapping("/search")
+    public String findMenuPrice(@RequestParam int menuPrice, Model model){
+
+        List<MenuDTO> menuList = menuService.findMenuPrice(menuPrice);
+
+        model.addAttribute("menuList", menuList);
+        model.addAttribute("menuPrice", menuPrice);
+
+        return "menu/searchResult";
+    }
 }
 
 

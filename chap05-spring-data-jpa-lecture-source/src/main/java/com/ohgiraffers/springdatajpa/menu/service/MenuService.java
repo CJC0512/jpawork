@@ -69,4 +69,11 @@ public class MenuService {
         return menuList.map(menu -> mapper.map(menu, MenuDTO.class));
     }
 
+    public List<MenuDTO> findMenuPrice(int menuPrice) {
+
+        /* 설명. 전달 받은 가격을 초과하는 메뉴의 목록을 조회하는 메소드 */
+        List<Menu> menuList = menuRepository.findByMenuPriceGreaterThan(menuPrice);
+
+        return menuList.stream().map(menu -> mapper.map(menu, MenuDTO.class)).collect(Collectors.toList());
+    }
 }
