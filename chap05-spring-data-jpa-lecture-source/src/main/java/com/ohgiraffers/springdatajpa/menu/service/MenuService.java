@@ -1,6 +1,8 @@
 package com.ohgiraffers.springdatajpa.menu.service;
 
+import com.ohgiraffers.springdatajpa.menu.dto.CategoryDTO;
 import com.ohgiraffers.springdatajpa.menu.dto.MenuDTO;
+import com.ohgiraffers.springdatajpa.menu.entity.Category;
 import com.ohgiraffers.springdatajpa.menu.entity.Menu;
 import com.ohgiraffers.springdatajpa.menu.repository.CategoryRepository;
 import com.ohgiraffers.springdatajpa.menu.repository.MenuRepository;
@@ -75,5 +77,12 @@ public class MenuService {
         List<Menu> menuList = menuRepository.findByMenuPriceGreaterThan(menuPrice);
 
         return menuList.stream().map(menu -> mapper.map(menu, MenuDTO.class)).collect(Collectors.toList());
+    }
+
+    public List<CategoryDTO> findAllCategory() {
+
+        List<Category> categoryList = categoryRepository.findAllCategory();
+
+        return categoryList.stream().map(category -> mapper.map(category, CategoryDTO.class)).collect(Collectors.toList());
     }
 }
