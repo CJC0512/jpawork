@@ -117,6 +117,35 @@ public class MenuController {
 
         return menuService.findAllCategory();
     }
+
+    /* 설명. Spring Data JPA로 DML 작업하기(Insert, Update, Delete) */
+    @PostMapping("/regist")
+    public String registMenu(MenuDTO newMenu){
+        log.info("컨트롤러에서 한번에 입력값 잘 받나 확인: {}", newMenu);
+        menuService.registMenu(newMenu);
+
+        return "redirect:/menu/list";
+    }
+
+    @GetMapping("/modify")
+    public void modifyPage(){}
+
+    @PostMapping("/modify")
+    public String modifyMenu(MenuDTO modifyMenu){
+        menuService.modifyMenu(modifyMenu);
+
+        return "redirect:/menu/" + modifyMenu.getMenuCode();
+    }
+
+    @GetMapping("/delete")
+    public void deletePage(){}
+
+    @PostMapping("/delete")
+    public String deleteMenu(@RequestParam int menuCode){
+        menuService.deleteMenu(menuCode);
+
+        return "redirect:/menu/list";
+    }
 }
 
 

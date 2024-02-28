@@ -10,6 +10,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
+@Setter
 @ToString
 // @Data    // 내부 class로 생성자를 비롯한 getter,setter가 다 만들어진다. 하지만 내부 class로 구현되기에 비효율적.
 public class Menu {
@@ -30,4 +31,5 @@ public class Menu {
 
     @Column(name = "orderable_status")
     private String orderableStatus;
+
 }
