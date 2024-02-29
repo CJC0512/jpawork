@@ -72,6 +72,7 @@ public class MenuService {
         return menuList.map(menu -> mapper.map(menu, MenuDTO.class));
     }
 
+    /* 설명. 4. QueryMethod */
     public List<MenuDTO> findMenuPrice(int menuPrice) {
 
         /* 설명. 전달 받은 가격을 초과하는 메뉴의 목록을 조회하는 메소드 */
@@ -80,6 +81,7 @@ public class MenuService {
         return menuList.stream().map(menu -> mapper.map(menu, MenuDTO.class)).collect(Collectors.toList());
     }
 
+    /* 설명. 5. JPQL or native query */
     public List<CategoryDTO> findAllCategory() {
 
         List<Category> categoryList = categoryRepository.findAllCategory();
@@ -87,11 +89,13 @@ public class MenuService {
         return categoryList.stream().map(category -> mapper.map(category, CategoryDTO.class)).collect(Collectors.toList());
     }
 
+    /* 설명. 6. 추가하기 - save */
     @Transactional
     public void registMenu(MenuDTO newMenu) {
         menuRepository.save(mapper.map(newMenu, Menu.class));
     }
 
+    /* 설명. 7. 수정하기 - 엔티티 조회 후 객체의 값 변경 */
     @Transactional
     public void modifyMenu(MenuDTO modifyMenu) {
 
@@ -99,6 +103,7 @@ public class MenuService {
         foundMenu.setMenuName(modifyMenu.getMenuName());        // update
     }
 
+    /* 설명. 8. 삭제하기 - delete */
     @Transactional
     public void deleteMenu(int menuCode) {
         menuRepository.deleteById(menuCode);
